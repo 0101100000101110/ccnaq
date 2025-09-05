@@ -12,17 +12,21 @@
     .header {
       text-align: center;
       margin-bottom: 40px;
+      position: relative;
     }
     .header img {
-      max-width: 150px;
-      display: block;
-      margin: 0 auto 15px;
+      width: 250px;   /* ✅ تكبير حجم الصورة */
+      float: left;    /* ✅ تحريك الصورة لليسار */
+      margin-right: 20px;
     }
     .header h1 {
       font-size: 28px;
       color: #333;
+      line-height: 250px; /* ✅ يخلي العنوان بمحاذاة الصورة */
+      margin: 0;
     }
     .question {
+      clear: both; /* ✅ يخلي الأسئلة تبدأ بعد الصورة */
       margin-bottom: 20px;
       padding: 15px;
       border: 1px solid #ccc;
@@ -86,4 +90,3 @@
 
 </body>
 </html>
-
