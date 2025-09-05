@@ -15,18 +15,18 @@
       position: relative;
     }
     .header img {
-      width: 500px;   /* ✅ تكبير حجم الصورة */
-      float: left;    /* ✅ تحريك الصورة لليسار */
+      width:1000px;
+      float: left;
       margin-right: 20px;
     }
     .header h1 {
       font-size: 28px;
       color: #333;
-      line-height: 250px; /* ✅ يخلي العنوان بمحاذاة الصورة */
+      line-height: 250px;
       margin: 0;
     }
     .question {
-      clear: both; /* ✅ يخلي الأسئلة تبدأ بعد الصورة */
+      clear: both;
       margin-bottom: 20px;
       padding: 15px;
       border: 1px solid #ccc;
@@ -39,6 +39,11 @@
     .choices label {
       display: block;
       margin-bottom: 5px;
+    }
+    .correct {
+      color: green;
+      font-weight: bold;
+      display: none; /* ✅ مخفي إلى أن يضغط الطالب Submit */
     }
     button {
       margin-top: 20px;
@@ -64,6 +69,7 @@
       <label><input type="radio" name="q1"> C. It load-balances traffic out of Fa0/1 and Fa0/2</label>
       <label><input type="radio" name="q1"> D. It is unreachable and discards the traffic</label>
     </div>
+    <p class="correct">✅ Correct Answer: D</p>
   </div>
 
   <div class="question">
@@ -74,6 +80,7 @@
       <label><input type="radio" name="q2"> C. AES encryption</label>
       <label><input type="radio" name="q2"> D. TKIP encryption</label>
     </div>
+    <p class="correct">✅ Correct Answer: A</p>
   </div>
 
   <div class="question">
@@ -84,10 +91,18 @@
       <label><input type="radio" name="q3"> C. FC00::/7</label>
       <label><input type="radio" name="q3"> D. FF00::/8</label>
     </div>
+    <p class="correct">✅ Correct Answer: D</p>
   </div>
 
-  <button onclick="alert('Answers submitted!')">Submit</button>
+  <button onclick="showAnswers()">Submit</button>
+
+  <script>
+    function showAnswers() {
+      // إظهار كل الإجابات الصحيحة
+      const correctAnswers = document.querySelectorAll(".correct");
+      correctAnswers.forEach(ans => ans.style.display = "block");
+    }
+  </script>
 
 </body>
 </html>
-
