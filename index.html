@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CCNA Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f9f9f9;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .header img {
+      max-width: 150px;
+      display: block;
+      margin: 0 auto 15px;
+    }
+    .header h1 {
+      font-size: 28px;
+      color: #333;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    .choices {
+      margin-top: 10px;
+    }
+    .choices label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ رأس الصفحة -->
+  <div class="header">
+    <img src="logo.png" alt="Logo">
+    <h1>CCNA Online Quiz</h1>
+  </div>
+
+  <!-- ✅ الأسئلة -->
+  <div class="question">
+    <p><strong>Q1:</strong> What does the router do after it determines that a packet is destined for a network that is not listed in the routing table?</p>
+    <div class="choices">
+      <label><input type="radio" name="q1"> A. It sends packets out of interface Fa0/1</label>
+      <label><input type="radio" name="q1"> B. It sends packets out of interface Fa0/2</label>
+      <label><input type="radio" name="q1"> C. It load-balances traffic out of Fa0/1 and Fa0/2</label>
+      <label><input type="radio" name="q1"> D. It is unreachable and discards the traffic</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q2:</strong> Which WPA3 enhancement protects against hackers viewing traffic on the Wi-Fi network?</p>
+    <div class="choices">
+      <label><input type="radio" name="q2"> A. SAE encryption</label>
+      <label><input type="radio" name="q2"> B. Encrypted encryption key</label>
+      <label><input type="radio" name="q2"> C. AES encryption</label>
+      <label><input type="radio" name="q2"> D. TKIP encryption</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q3:</strong> Which IPv6 address block sends packets to a group address rather than a single address?</p>
+    <div class="choices">
+      <label><input type="radio" name="q3"> A. FE80::/10</label>
+      <label><input type="radio" name="q3"> B. FEC0::/10</label>
+      <label><input type="radio" name="q3"> C. FC00::/7</label>
+      <label><input type="radio" name="q3"> D. FF00::/8</label>
+    </div>
+  </div>
+
+  <button onclick="alert('Answers submitted!')">Submit</button>
+
+</body>
+</html>
